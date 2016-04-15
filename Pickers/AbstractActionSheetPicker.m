@@ -210,6 +210,10 @@ CG_INLINE BOOL isIPhone4() {
     if ([self.pickerView respondsToSelector:@selector(removeTarget:action:forControlEvents:)])
         [((UIControl *) self.pickerView) removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
 
+    // nullify target for buttons in order to avoid crash on simultaneously buttons pressed (iPad)
+    [self.toolbar.items enumerateObjectsUsingBlock:^(UIBarButtonItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj.target = nil;
+    }];
     self.target = nil;
 
     [[NSNotificationCenter defaultCenter] removeObserver:self];
