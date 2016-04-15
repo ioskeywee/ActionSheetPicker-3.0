@@ -684,11 +684,12 @@ CG_INLINE BOOL isIPhone4() {
 
     _actionSheet = [[SWActionSheet alloc] initWithView:aView];
     _actionSheet.overlayBackgroundColor = self.overlayBackgroundColor;
-
+    _actionSheet.isToolbarVisible = !self.toolbar.hidden;
+    
     if (self.pickerBackgroundColor) {
         _actionSheet.bgView.backgroundColor = self.pickerBackgroundColor;
     }
-
+    
     [self presentActionSheet:_actionSheet];
 
     // Use beginAnimations for a smoother popup animation, otherwise the UIActionSheet pops into view

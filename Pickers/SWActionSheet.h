@@ -10,6 +10,7 @@
 @property (nonatomic, strong) UIView *bgView;
 
 @property (nonatomic, strong) UIColor *overlayBackgroundColor;
+@property (nonatomic, assign) BOOL isToolbarVisible;
 
 - (void)dismissWithClickedButtonIndex:(int)i animated:(BOOL)animated;
 

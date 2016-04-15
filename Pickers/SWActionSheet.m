@@ -120,7 +120,7 @@ static const enum UIViewAnimationOptions options = UIViewAnimationOptionCurveEas
     self.frame = CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.width, bounds.size.height + view.bounds.size.height);
     view.frame = CGRectMake(view.bounds.origin.x, bounds.size.height, view.bounds.size.width, view.bounds.size.height);
     view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    _bgView.frame = view.frame;
+    _bgView.frame = self.isToolbarVisible? CGRectMake(view.bounds.origin.x, bounds.size.height + 44.f, view.bounds.size.width, view.bounds.size.height - 44.f) : view.frame;
     _bgView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 }
 
