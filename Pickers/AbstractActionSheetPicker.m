@@ -685,6 +685,7 @@ CG_INLINE BOOL isIPhone4() {
     _actionSheet = [[SWActionSheet alloc] initWithView:aView];
     if (self.pickerBackgroundColor) {
         _actionSheet.bgView.backgroundColor = self.pickerBackgroundColor;
+        _actionSheet.overlayBackgroundColor = self.overlayBackgroundColor;
     }
 
     [self presentActionSheet:_actionSheet];

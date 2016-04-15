@@ -7,7 +7,9 @@
 #import <UIKit/UIKit.h>
 
 @interface SWActionSheet : UIView
-@property(nonatomic, strong) UIView *bgView;
+@property (nonatomic, strong) UIView *bgView;
+
+@property (nonatomic, strong) UIColor *overlayBackgroundColor;
 
 - (void)dismissWithClickedButtonIndex:(int)i animated:(BOOL)animated;
 

@@ -82,7 +82,7 @@ static NSString *const kActionTarget = @"buttonActionTarget";
 @property(nonatomic) UIInterfaceOrientationMask supportedInterfaceOrientations; // You can set your own supportedInterfaceOrientations value to prevent dismissing picker in some special cases.
 @property(nonatomic) TapAction tapDismissAction; // Specify, which action should be fired in case of tapping outside of the picker (on top darkened side). Default is TapActionNone.
 @property(nonatomic) BOOL popoverDisabled; // Disable popover behavior on iPad
-
+@property (nonatomic, strong) UIColor *overlayBackgroundColor;
 
 - (void)setTextColor:(UIColor *)textColor;
 
